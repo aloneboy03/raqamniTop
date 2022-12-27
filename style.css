@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right bottom, red 30%, green 60%);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 45rem;
+    height: 30rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.text{
+    margin: 2rem;
+}
+
+.text h1{
+    font-size: 2.4rem;
+    text-align: center;
+    color: rgb(233, 162, 104) ;
+}
+
+.text .coder a{
+    color: rgb(168, 243, 125);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 4rem;
+    text-align: center;
+    margin: 3rem;
+}
+
+.game input{
+    background-color: #fff;
+    width: 30rem;
+    height: 4rem;
+    border-radius: 0.7rem;
+    border: none;
+    font-size: 1.4rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    color: #222;
+    padding-left: 1rem;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result--text{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn button{
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #222;
+}
+
+.start{
+    color: rgb(85, 229, 240);
+}
+
+.restart{
+    color: rgb(243, 106, 106);
+}
+
+.attempt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.attempt--num,
+.attempt--text{
+    font-size: 2rem;
+    color: #fff;
+}
+
+@media only screen and (max-width: 700px) {
+    .text h1{
+        font-size: 1.8rem;
+    }
+    .box{
+        width: 35rem;
+        height: 25rem;
+    }
+    .game{
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .text h1{
+        font-size: 1.8rem;
+    }
+    .box{
+        width: 30rem;
+        height: 25rem;
+    }
+    .game{
+        gap: 1rem;
+    }
+    .game input{
+        width: 20rem;
+        height: 4rem;
+    }
+}
